@@ -11,7 +11,10 @@ function createCalc(max: number, min: number, num: number, operate: TOperate) {
         for (let j = 0; j < 10; j++) {
             if (j % 2 === 0) {
                 const num1 = Math.floor(Math.random() * (max - min + 1) + min)
-                const num2 = Math.floor(Math.random() * (max - min + 1) + min)
+                let num2 = Math.floor(Math.random() * (max - min + 1) + min)
+                while (operate === '/' && num2 === 0) {
+                    num2 = Math.floor(Math.random() * (max - min + 1) + min)
+                }
                 switch (operate) {
                     case '+':
                         dataItem.push(`${num1}+${num2}=`)
@@ -35,7 +38,7 @@ function createCalc(max: number, min: number, num: number, operate: TOperate) {
         data.push(dataItem)
         result.push(resultItem)
     }
-    return [{ name: 'calcList', data: data, options: {} }, { name: 'result', data: result, options: {} }]
+    return [{ name: '计算式', data: data, options: {} }, { name: '答案集', data: result, options: {} }]
 }
 const data = createCalc(100, 0, 100, '+')
 const buffer = xlsx.build(data);
