@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node main.ts"
+    "start": "ts-node node2/main.ts"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "node-xlsx": "^0.21.0"
+    "node-xlsx": "^0.21.0",
+    "puppeteer": "^19.4.1"
   }
 }

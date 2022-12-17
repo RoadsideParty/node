@@ -42,7 +42,7 @@ function createCalc(max: number, min: number, num: number, operate: TOperate) {
 }
 const data = createCalc(100, 0, 100, '+')
 const buffer = xlsx.build(data);
-fs.writeFile('./calc.xlsx', buffer, function (err) {
+fs.writeFile('./node1/calc.xlsx', buffer, function (err) {
     if (err) throw err;
     console.log('File is created successfully.');
 });

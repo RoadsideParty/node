@@ -1,3 +1,7 @@
 node_modules
 *.xlsx
 .vscode
+node2/*.png
+node2/*.jpg
+node2/*.webp
+node2/*.pdf
